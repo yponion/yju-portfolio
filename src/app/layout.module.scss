@@ -1,0 +1,23 @@
+@use "./variables.scss" as v;
+
+.root {
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
+  @media #{v.$mobile} {
+    flex-direction: column;
+  }
+}
+
+.nav {
+  width: var(--nav-width);
+  height: var(--nav-height);
+  @media #{v.$mobile} {
+    order: 1;
+  }
+}
+
+.content {
+  flex: 1;
+  overflow-y: scroll;
+}
