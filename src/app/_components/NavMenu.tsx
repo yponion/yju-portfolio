@@ -54,7 +54,7 @@ export default function NavMunu() {
       <ul className={style.ul}>
         {menus.map((menu) => (
           <li key={menu.title} className={style.list}>
-            <Link href={menu.href}>
+            <Link href={menu.href} className={style.link}>
               <div className={style.menu}>
                 <div className={style.svg}>{menu.svg}</div>
                 <div className={style.title}>{menu.title}</div>
