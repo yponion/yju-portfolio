@@ -8,7 +8,7 @@ const menu = ["About Me", "Skills", "Archiving", "Projects"];
 
 export default function Nav() {
   const { currentY, previousY } = useScrollPosition();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(1024);
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
