@@ -21,8 +21,8 @@
 
 .h1 {
   font-size: 48px;
+  border-bottom: 1px solid var(--nav-text-color);
   @media #{v.$mobile} {
     font-size: 32px;
   }
-  border-bottom: 1px solid var(--nav-text-color);
 }
