@@ -15,7 +15,7 @@ export default function Main() {
         <h1 className={style.contactTitle}>Contact</h1>
         <div className={style.contactContent}>
           <h2>{process.env.NEXT_PUBLIC_EMAIL}</h2>
-          <h2>{process.env.NEXT_PUBLIC_Phone}</h2>
+          <h2>{process.env.NEXT_PUBLIC_PHONE}</h2>
         </div>
       </div>
     </section>
