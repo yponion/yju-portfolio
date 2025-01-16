@@ -12,6 +12,7 @@ export default function Nav() {
   const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
+    if (window) setWindowWidth(window.innerWidth);
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
