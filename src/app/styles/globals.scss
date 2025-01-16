@@ -1,33 +1,16 @@
-@use "./variables" as v;
-
-:root {
-  --nav-width: 200px;
-  --nav-height: 100dvh;
-}
-
-@media #{v.$tablet} {
-  :root {
-    --nav-width: 70px;
-    --nav-height: 100dvh;
-  }
-}
-
-@media #{v.$mobile} {
-  :root {
-    --nav-width: 100dvw;
-    --nav-height: 50px;
-  }
-}
-
 :root {
   --bg-color: white;
   --text-color: black;
+  --cover-color: rgba(220, 220, 220, 0.8);
+  --nav-text-color: rgba(20, 20, 20, 0.8);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: black;
     --text-color: white;
+    --cover-color: rgba(20, 20, 20, 0.8);
+    --nav-text-color: rgba(220, 220, 220, 0.8);
   }
 }
 

@@ -1,0 +1,41 @@
+@use "@/app/styles/mixins.scss" as m;
+
+.container {
+  height: 100dvh;
+  background-color: darkslategrey; // test
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleWrapper {
+  background: linear-gradient(var(--cover-color), var(--cover-color)),
+    url("/white.png") center/cover no-repeat;
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  // h1 {
+  //   font-size: 5vw;
+  //   white-space: nowrap;
+  // }
+}
+.contactWrapper {
+  @include m.wd;
+  background-color: firebrick; // test
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactTitle {
+  font-size: 48px;
+}
+.contactContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,135 @@
+@use "@/app/styles/mixins.scss" as m;
+@use "@/app/styles/variables.scss" as v;
+
+.container {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: 72px;
+  transition: transform 0.3s ease;
+  &.hide {
+    transform: translateY(-100%);
+  }
+  &.show {
+    transform: translateY(0);
+  }
+}
+
+.navBG {
+  background: linear-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.5) 90%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  @media (prefers-color-scheme: dark) {
+    background: linear-gradient(
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.5) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.navWraper {
+  @include m.wd;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 24px;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  @media #{v.$mobile} {
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    right: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+
+    &.show {
+      opacity: 1;
+      height: 158px;
+    }
+    &.hide {
+      opacity: 0;
+      height: 0;
+    }
+  }
+}
+
+.li {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0 16px;
+  cursor: pointer;
+  color: var(--nav-text-color);
+  &:hover {
+    color: var(--text-color);
+  }
+  @media #{v.$mobile} {
+    padding-right: 6px;
+    text-align: right;
+    text-shadow: 2px 2px 2px black, 2px -2px 2px black, -2px 2px 2px black,
+      -2px -2px 2px black, 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black,
+      -1px -1px 0 black;
+  }
+}
+
+.menuBtn {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.lineBox {
+  position: relative;
+  height: 16px;
+  width: 32px;
+}
+
+@mixin line {
+  width: 100%;
+  border-radius: 1.5px;
+  height: 2px;
+  background-color: var(--nav-text-color);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+  &.open {
+    @content;
+  }
+}
+.top {
+  top: 0;
+  @include line {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+}
+.mid {
+  top: 45%;
+  @include line {
+    opacity: 0;
+  }
+}
+.bot {
+  bottom: 0;
+  @include line {
+    transform: rotate(135deg);
+    top: 50%;
+  }
+}
