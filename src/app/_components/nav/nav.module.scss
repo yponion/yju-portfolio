@@ -14,6 +14,7 @@
   &.show {
     transform: translateY(0);
   }
+  z-index: 10;
 }
 
 .navBG {
@@ -80,9 +81,10 @@
   @media #{v.$mobile} {
     padding-right: 6px;
     text-align: right;
-    text-shadow: 2px 2px 2px black, 2px -2px 2px black, -2px 2px 2px black,
-      -2px -2px 2px black, 1px 1px 0 black, -1px 1px 0 black, 1px -1px 0 black,
-      -1px -1px 0 black;
+    text-shadow: 2px 2px 2px var(--bg-color), 2px -2px 2px var(--bg-color),
+      -2px 2px 2px var(--bg-color), -2px -2px 2px var(--bg-color),
+      1px 1px 0 var(--bg-color), -1px 1px 0 var(--bg-color),
+      1px -1px 0 var(--bg-color), -1px -1px 0 var(--bg-color);
   }
 }
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import style from "./nav.module.scss";
+import style from "./Nav.module.scss";
 import { useScrollPosition } from "@/app/_hooks/useScrollPosition";
 
 const menu = ["About Me", "Skills", "Archiving", "Projects"];

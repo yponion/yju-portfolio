@@ -1,15 +1,17 @@
 @use "@/app/styles/mixins.scss" as m;
+@use "@/app/styles/variables.scss" as v;
 
 .container {
   height: 100dvh;
-  background-color: darkslategrey; // test
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.titleWrapper {
+.mainWrapper {
+  padding-top: 72px;
   background: linear-gradient(var(--cover-color), var(--cover-color)),
     url("/white.png") center/cover no-repeat;
   flex: 7;
@@ -18,24 +20,95 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  // h1 {
-  //   font-size: 5vw;
-  //   white-space: nowrap;
-  // }
 }
+.mainH1s {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainName {
+  font-size: clamp(10px, 20vw, 100px);
+}
+
+.mainTitle {
+  font-size: clamp(10px, 7vw, 100px);
+}
+.mainHr {
+  flex: 1;
+}
+.mainIntroduce {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  font-size: clamp(10px, 3vw, 16px);
+}
+
 .contactWrapper {
   @include m.wd;
-  background-color: firebrick; // test
   flex: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 32px 0;
 }
-.contactTitle {
-  font-size: 48px;
-}
+
 .contactContent {
+  width: 100%;
+  padding: 0 5%;
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.inner {
+  position: relative;
+  min-width: 300px;
+}
+
+.title {
+  position: absolute;
+  top: -7.5px;
+  left: 10px;
+  padding: 0 10px;
+  border: 1px solid var(--nav-text-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  font-size: 12px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  height: 100px;
+  border: 1px solid var(--nav-text-color);
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  align-items: center;
+
+  @media #{v.$mobile} {
+    height: 50px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+  @media (prefers-color-scheme: dark) {
+    svg {
+      fill: var(--text-color);
+    }
+  }
 }

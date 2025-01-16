@@ -1,5 +1,10 @@
+import Title from "../title/Title";
 import style from "./AboutMe.module.scss";
 
 export default function AboutMe() {
-  return <div className={style.container}>About Me</div>;
+  return (
+    <div className={style.container}>
+      <Title title="AboutMe" />
+    </div>
+  );
 }
