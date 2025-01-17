@@ -1,22 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import style from "./Nav.module.scss";
 import { useScrollPosition } from "@/app/_hooks/useScrollPosition";
+import useIsMobile from "@/app/_hooks/useIsMobile";
 
 const menu = ["About Me", "Skills", "Archiving", "Projects"];
 
 export default function Nav() {
   const { currentY, previousY } = useScrollPosition();
-  const [windowWidth, setWindowWidth] = useState(1024);
+  const isMobile = useIsMobile();
   const [showMenu, setShowMenu] = useState(false);
-
-  useEffect(() => {
-    if (window) setWindowWidth(window.innerWidth);
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const onClickMenu = () => {
     setShowMenu(!showMenu);
@@ -39,7 +33,7 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-          {windowWidth <= 767 ? (
+          {isMobile ? (
             <div className={style.menuBtn} onClick={onClickMenu}>
               <div className={style.lineBox}>
                 {["top", "mid", "bot"].map((v, i) => (
