@@ -1,5 +1,4 @@
-@use "@/app/styles/mixins.scss" as m;
-@use "@/app/styles/variables.scss" as v;
+@use "@/app/_styles/mixins.scss" as m;
 
 .container {
   height: 100dvh;
@@ -12,7 +11,10 @@
 
 .mainWrapper {
   padding-top: 72px;
-  background: linear-gradient(var(--cover-color), var(--cover-color)),
+  background: linear-gradient(
+      var(--bg-color-opacity-90p),
+      var(--bg-color-opacity-90p)
+    ),
     url("/white.png") center/cover no-repeat;
   flex: 7;
   display: flex;
@@ -38,7 +40,7 @@
 }
 .mainHr {
   flex: 1;
-  border: 1px solid var(--nav-text-color);
+  border: 1px solid var(--text-color-opacity-80p);
 }
 .mainIntroduce {
   flex: 2;
@@ -67,49 +69,4 @@
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-.inner {
-  position: relative;
-  min-width: 300px;
-}
-
-.title {
-  position: absolute;
-  top: -7.5px;
-  left: 10px;
-  padding: 0 10px;
-  border: 1px solid var(--nav-text-color);
-  border-radius: 10px;
-  background-color: var(--bg-color);
-  font-size: 12px;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  height: 100px;
-  border: 1px solid var(--nav-text-color);
-  border-radius: 10px;
-  background-color: var(--bg-color);
-  align-items: center;
-
-  @media #{v.$mobile} {
-    height: 50px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}
-
-.svg {
-  width: 20px;
-  height: 20px;
-  @media (prefers-color-scheme: dark) {
-    svg {
-      fill: var(--text-color);
-    }
-  }
 }

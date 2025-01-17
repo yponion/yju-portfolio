@@ -1,5 +1,5 @@
-@use "@/app/styles/mixins.scss" as m;
-@use "@/app/styles/variables.scss" as v;
+@use "@/app/_styles/mixins.scss" as m;
+@use "@/app/_styles/variables.scss" as v;
 
 .container {
   width: 100%;
@@ -74,7 +74,7 @@
   line-height: 32px;
   padding: 0 16px;
   cursor: pointer;
-  color: var(--nav-text-color);
+  color: var(--text-color-opacity-80p);
   &:hover {
     color: var(--text-color);
   }
@@ -107,7 +107,7 @@
   width: 100%;
   border-radius: 1.5px;
   height: 2px;
-  background-color: var(--nav-text-color);
+  background-color: var(--text-color-opacity-80p);
   position: absolute;
   left: 0;
   transition: all 0.3s ease;
