@@ -34,7 +34,7 @@ export default function Main() {
         <hr className={style.mainHr} />
         <div className={style.mainIntroduce}>
           <h2>
-            반응형 UI를 즐기고,
+            <span>반응형 UI</span>를 즐기고,
             <br /> UX를 중시하는 프론트 엔드 개발자
             <br /> 양정운 입니다.
           </h2>

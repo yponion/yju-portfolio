@@ -28,10 +28,8 @@ const svg = {
   ),
 };
 
-type SvgKeys = keyof typeof svg;
-
 interface Props {
-  title: SvgKeys;
+  title: keyof typeof svg;
 }
 
 export default function Title({ title }: Props) {
