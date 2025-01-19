@@ -1,4 +1,4 @@
-import Timeline from "../timeline/Timeline";
+import Timeline from "./components/timeline/Timeline";
 import Title from "../title/Title";
 import style from "./AboutMe.module.scss";
 

@@ -6,7 +6,7 @@ import { useScrollPosition } from "@/app/_hooks/useScrollPosition";
 import useIsMobile from "@/app/_hooks/useIsMobile";
 import Link from "next/link";
 
-const menu = ["About Me", "Skills", "Archiving", "Projects"];
+const menu = ["AboutMe", "Skills", "Archiving", "Projects"];
 
 export default function Nav() {
   const { currentY, previousY } = useScrollPosition();
@@ -30,7 +30,7 @@ export default function Nav() {
           <ul className={`${style.ul} ${showMenu ? style.show : style.hide}`}>
             {menu.map((v, i) => (
               <li key={i} className={style.li}>
-                <Link href={"#AboutMe"}>{v}</Link>
+                <Link href={`#${v}`}>{v}</Link>
               </li>
             ))}
           </ul>

@@ -1,4 +1,4 @@
-import Card from "../card/Card";
+import Card from "./components/card/Card";
 import Title from "../title/Title";
 import style from "./Main.module.scss";
 
