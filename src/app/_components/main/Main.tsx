@@ -41,7 +41,7 @@ export default function Main() {
         </div>
       </div>
       <div className={style.contactWrapper}>
-        <Title title="Contact" />
+        <Title title="Contact" paddingTop={0} />
         <div className={style.contactContent}>
           {data.map((v) => (
             <Card

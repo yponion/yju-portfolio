@@ -4,6 +4,7 @@ import { useState } from "react";
 import style from "./Nav.module.scss";
 import { useScrollPosition } from "@/app/_hooks/useScrollPosition";
 import useIsMobile from "@/app/_hooks/useIsMobile";
+import Link from "next/link";
 
 const menu = ["About Me", "Skills", "Archiving", "Projects"];
 
@@ -29,7 +30,7 @@ export default function Nav() {
           <ul className={`${style.ul} ${showMenu ? style.show : style.hide}`}>
             {menu.map((v, i) => (
               <li key={i} className={style.li}>
-                {v}
+                <Link href={"#AboutMe"}>{v}</Link>
               </li>
             ))}
           </ul>

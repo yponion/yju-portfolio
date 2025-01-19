@@ -30,11 +30,12 @@ const svg = {
 
 interface Props {
   title: keyof typeof svg;
+  paddingTop?: number;
 }
 
-export default function Title({ title }: Props) {
+export default function Title({ title, paddingTop }: Props) {
   return (
-    <div className={style.container}>
+    <div id={title} className={style.container} style={{ paddingTop }}>
       <div className={style.svg}>{svg[title]}</div>
       <h1 className={style.h1}>{title}</h1>
     </div>
