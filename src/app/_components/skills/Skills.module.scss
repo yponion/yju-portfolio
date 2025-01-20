@@ -1,3 +1,81 @@
+@use "@/app/_styles/variables.scss" as v;
+
 .container {
-  background-color: darkcyan;
+  // background-color: darkred; // test
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.table {
+  // background-color: darkblue; // test
+  flex: 1;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 50px;
+}
+
+.row {
+  // background-color: darkslateblue; // test
+  display: flex;
+
+  @media #{v.$mobile} {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.title {
+  // background-color: darkolivegreen; // test
+  flex: 2;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  div {
+    fill: var(--text-color);
+    width: 30px;
+    height: 30px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+}
+
+.skills {
+  // background-color: darkgreen; // test
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  flex: 8;
+}
+
+.skill {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+
+  @media #{v.$mobile} {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.name {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 0 5px;
+
+  @media #{v.$mobile} {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 0 5px;
+  }
 }
