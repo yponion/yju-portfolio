@@ -7,7 +7,6 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
 .inner {
@@ -16,6 +15,6 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0 10px;
+  padding: 50px 10px;
   gap: 10px;
 }
