@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.inner {
+  flex: 1;
+  max-width: var(--max-width);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  gap: 10px;
+}

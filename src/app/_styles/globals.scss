@@ -4,6 +4,8 @@
 
 :root {
   --bg-color: white;
+  --bg-color-opacity-20p: rgba(220, 220, 220, 0.2);
+  --bg-color-opacity-80p: rgba(220, 220, 220, 0.8);
   --bg-color-opacity-90p: rgba(220, 220, 220, 0.9);
   --text-color: black;
   --text-color-opacity-20p: rgba(20, 20, 20, 0.2);
@@ -14,6 +16,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: black;
+    --bg-color-opacity-20p: rgba(20, 20, 20, 0.2);
+    --bg-color-opacity-90p: rgba(20, 20, 20, 0.8);
     --bg-color-opacity-90p: rgba(20, 20, 20, 0.9);
     --text-color: white;
     --text-color-opacity-20p: rgba(220, 220, 220, 0.2);
