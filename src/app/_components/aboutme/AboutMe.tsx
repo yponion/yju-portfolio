@@ -21,7 +21,7 @@ const data = [
 
 export default function AboutMe() {
   return (
-    <section className={style.container}>
+    <section id="AboutMe" className={style.container}>
       <Title title="AboutMe" />
       <div className={style.wrapper}>
         {data.map((v, i) => (

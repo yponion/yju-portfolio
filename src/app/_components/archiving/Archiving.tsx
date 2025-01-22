@@ -41,7 +41,7 @@ const data: Card[] = [
 
 export default function Archiving() {
   return (
-    <div className={style.container}>
+    <section id="Archiving" className={style.container}>
       <Title title="Archiving" />
       <div className={style.wrapper}>
         <div className={style.inner}>
@@ -50,6 +50,6 @@ export default function Archiving() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

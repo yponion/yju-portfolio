@@ -1,6 +1,7 @@
 import Card from "./components/card/Card";
 import Title from "../title/Title";
 import style from "./Main.module.scss";
+import { menu } from "@/app/_types/Menu";
 
 const data = [
   {
@@ -40,8 +41,8 @@ export default function Main() {
           </h2>
         </div>
       </div>
-      <div className={style.contactWrapper}>
-        <Title title="Contact" paddingTop={0} />
+      <div id="Contact" className={style.contactWrapper}>
+        <Title title="Contact" />
         <div className={style.contactContent}>
           {data.map((v) => (
             <Card

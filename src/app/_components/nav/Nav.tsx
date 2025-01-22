@@ -5,8 +5,7 @@ import style from "./Nav.module.scss";
 import { useScrollPosition } from "@/app/_hooks/useScrollPosition";
 import useIsMobile from "@/app/_hooks/useIsMobile";
 import Link from "next/link";
-
-const menu = ["AboutMe", "Skills", "Archiving", "Projects"];
+import { menu } from "@/app/_types/Menu";
 
 export default function Nav() {
   const { currentY, previousY } = useScrollPosition();

@@ -263,9 +263,9 @@ const data: Category[] = [
 
 export default function Skills() {
   return (
-    <>
+    <section id="Skills" className={style.container}>
       <Title title="Skills" />
-      <div className={style.container}>
+      <div className={style.wrapper}>
         <div className={style.table}>
           {data.map((v) => (
             <div key={v.title} className={style.row}>
@@ -299,6 +299,6 @@ export default function Skills() {
           ))}
         </div>
       </div>
-    </>
+    </section>
   );
 }
