@@ -1,7 +1,6 @@
 import Card from "./components/card/Card";
 import Title from "../title/Title";
 import style from "./Main.module.scss";
-import { menu } from "@/app/_types/Menu";
 
 const data = [
   {

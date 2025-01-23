@@ -11,12 +11,69 @@
 .inner {
   max-width: var(--max-width);
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .card {
-  background-color: darkgreen;
+  background-color: var(--text-color-opacity-10p);
   height: 400px;
-  width: 300px;
-  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  &:hover .img {
+    transform: scale(1.1);
+  }
+  &:hover .skills {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  &:hover .more {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+}
+
+.viewBox {
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.img {
+  transition: transform 0.3s ease;
+}
+
+.text {
+  padding: 20px;
+}
+
+@mixin overText {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  @include overText;
+}
+
+.skills {
+  @include overText;
+  opacity: 1;
+  transition: all 0.3s ease;
+  padding-top: 10px;
+}
+
+.more {
+  @include overText;
+  opacity: 0;
+  transition: all 0.3s ease;
 }
