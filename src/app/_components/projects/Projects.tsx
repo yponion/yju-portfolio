@@ -1,25 +1,14 @@
-"use client";
-
-import Image from "next/image";
 import Title from "../title/Title";
 import style from "./Projects.module.scss";
-
-interface Project {
-  title: string;
-  skills: string[];
-  src: string;
-  date: string;
-  headcount: number;
-  introduce: string;
-  github?: string;
-  website?: string;
-}
+import type { Project } from "@/app/_types/Project";
+import Card from "./components/card/Card";
 
 const data: Project[] = [
   {
     title: "yju-portfolio",
     skills: ["Next.js", "TypeScript", "Sass"],
     src: process.env.NEXT_PUBLIC_BASE_URL as string,
+    images: [],
     date: "2025.01-2025.02",
     headcount: 1,
     introduce:
@@ -30,6 +19,7 @@ const data: Project[] = [
     title: "Qcraft",
     skills: ["React", "TypeScript", "Redux"],
     src: "/qcraft.png",
+    images: [],
     date: "2024.09-2024.12",
     headcount: 2,
     introduce: "AI 가상 인터뷰. Web Speech API를 활용해 음성답변 기능 구현",
@@ -39,6 +29,7 @@ const data: Project[] = [
     title: "Project Pulse BE",
     skills: ["Node.js", "JavaScript", "MongoDB"],
     src: "/project-pulse-be.png",
+    images: [],
     date: "2024.04",
     headcount: 1,
     introduce:
@@ -49,6 +40,7 @@ const data: Project[] = [
     title: "Project Pulse FE",
     skills: ["React", "JavaScript", "Redux"],
     src: "/project-pulse-fe.png",
+    images: [],
     date: "2023.11-2024.12",
     headcount: 2,
     introduce: "프로젝트 관리 웹사이트.",
@@ -57,36 +49,13 @@ const data: Project[] = [
 ];
 
 export default function Projects() {
-  const openModal = () => {
-    console.log("test");
-  };
   return (
     <section id="Projects" className={style.container}>
       <Title title="Projects" />
-
       <div className={style.wrapper}>
         <div className={style.inner}>
           {data.map((v) => (
-            <div key={v.title} className={style.card} onClick={openModal}>
-              <div className={style.viewBox}>
-                {v.title === "yju-portfolio" ? (
-                  <iframe src={v.src} />
-                ) : (
-                  <Image
-                    className={style.img}
-                    layout="fill"
-                    objectFit="cover"
-                    src={v.src}
-                    alt={v.title + "이미지"}
-                  />
-                )}
-              </div>
-              <div className={style.text}>
-                <h1 className={style.title}>{v.title}</h1>
-                <p className={style.skills}>{v.skills.join(" / ")}</p>
-                <p className={style.more}>{v.introduce}</p>
-              </div>
-            </div>
+            <Card key={v.title} project={v} />
           ))}
         </div>
       </div>

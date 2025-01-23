@@ -14,7 +14,7 @@
   &.show {
     transform: translateY(0);
   }
-  z-index: 10;
+  z-index: #{v.$z-nav};
 }
 
 .navBG {
