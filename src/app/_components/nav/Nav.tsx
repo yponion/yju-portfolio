@@ -46,7 +46,10 @@ export default function Nav() {
         }`}
       >
         <div className={style.navWraper}>
-          <div className={style.logo}>YJU&apos;s Portfolio</div>
+          <a
+            href={process.env.NEXT_PUBLIC_BASE_URL as string}
+            className={style.logo}
+          >{`YJU's Portfolio`}</a>
           <>
             <ul className={`${style.ul} ${showMenu ? style.show : style.hide}`}>
               {menu.map((v, i) => (
