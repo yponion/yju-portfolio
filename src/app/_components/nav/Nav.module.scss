@@ -59,7 +59,7 @@
 
     &.show {
       opacity: 1;
-      height: 200px;      
+      height: 200px;
     }
     &.hide {
       opacity: 0;
@@ -133,5 +133,24 @@
   @include line {
     transform: rotate(135deg);
     top: 50%;
+  }
+}
+
+.up {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--text-color-opacity-10p);
+  fill: var(--text-color-opacity-50p);
+  z-index: #{v.$z-up};
+  cursor: pointer;
+  &:hover {
+    background-color: var(--text-color-opacity-20p);
+    fill: var(--text-color-opacity-80p);
   }
 }
