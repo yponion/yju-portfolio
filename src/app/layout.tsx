@@ -19,7 +19,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Suspense>{modal}</Suspense>
         <header>
           <nav>
             <Nav />
@@ -29,6 +28,7 @@ export default function RootLayout({
         <footer>
           <Footer />
         </footer>
+        <Suspense>{modal}</Suspense>
       </body>
     </html>
   );
