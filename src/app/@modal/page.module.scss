@@ -15,7 +15,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 15px;
   @media #{v.$desktop} {
     box-shadow: 0 0 1px var(--text-color);
     margin: 50px calc((100% - 700px) / 2);
@@ -29,9 +29,62 @@
 .header {
   display: flex;
   justify-content: space-between;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.title {
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  svg {
+    fill: var(--text-color);
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    background-color: var(--text-color-opacity-20p);
+  }
 }
 
 .imgBox {
+  // height: 400px;
+}
+
+.img {
   height: 400px;
-  background-color: darkcyan;
+}
+
+.skills {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.skill {
+  border: solid 1px var(--text-color-opacity-90p);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.date {
+  padding: 5px;
+  color: var(--text-color-opacity-90p);
+}
+
+.headcount {
+  color: var(--text-color-opacity-90p);
+  padding: 5px;
+}
+
+.introduce {
+  padding: 5px;
 }
