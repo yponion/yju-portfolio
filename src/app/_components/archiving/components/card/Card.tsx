@@ -33,7 +33,9 @@ export default function Card({ data }: Props) {
   }, []);
 
   return (
-    <Link
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
       href={`https://${data.href}`}
       className={`${style.card} ${active ? style.active : ""}`}
     >
@@ -47,6 +49,6 @@ export default function Card({ data }: Props) {
         </div>
         <h1>{data.title}</h1>
       </div>
-    </Link>
+    </a>
   );
 }
