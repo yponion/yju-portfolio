@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function Card({ project }: Props) {
-  const {active, ref}=useScrollTrigger({onece:true});
+  const { active, ref } = useScrollTrigger({ onece: true });
   const modalStore = useModalStore();
   const openModal = (data: Project) => {
     modalStore.setData(data);
@@ -30,8 +30,7 @@ export default function Card({ project }: Props) {
         ) : (
           <Image
             className={style.img}
-            layout="fill"
-            objectFit="cover"
+            fill
             src={project.src}
             alt={project.title + "이미지"}
           />
