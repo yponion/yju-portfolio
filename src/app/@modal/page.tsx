@@ -2,7 +2,7 @@
 
 import { useModalStore } from "@/store/modal";
 import style from "./page.module.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,22 +10,32 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Modal() {
-  const { open, data, setOpen } = useModalStore();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const { data } = useModalStore();
+  const [show, setShow] = useState(false);
+
   useEffect(() => {
-    if (open) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [open]);
+    if (searchParams.get("modal") === "open") {
+      if (data) setShow(true);
+      else {
+        const newParams = new URLSearchParams(searchParams.toString());
+        newParams.delete("modal");
+        router.replace(`?${newParams.toString()}`);
+      }
+    } else {
+      setShow(false);
+    }
+  }, [searchParams, data]);
 
   const closeModal = () => {
-    setOpen(false);
+    router.back();
   };
 
-  if (!open) return null;
+  if (!show) return null;
   return (
     <div className={style.container} onClick={closeModal}>
       <div className={style.inner} onClick={(e) => e.stopPropagation()}>

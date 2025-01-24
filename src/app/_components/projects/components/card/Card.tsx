@@ -5,6 +5,7 @@ import style from "./Card.module.scss";
 import Image from "next/image";
 import { useModalStore } from "@/store/modal";
 import { useScrollTrigger } from "@/app/_hooks/useScrollTrigger";
+import { useRouter } from "next/navigation";
 
 interface Props {
   project: Project;
@@ -13,9 +14,11 @@ interface Props {
 export default function Card({ project }: Props) {
   const { active, ref } = useScrollTrigger({ onece: true });
   const modalStore = useModalStore();
+  const router = useRouter();
   const openModal = (data: Project) => {
     modalStore.setData(data);
     modalStore.setOpen(true);
+    router.push("?modal=open", { scroll: false });
   };
 
   return (
