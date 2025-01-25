@@ -19,10 +19,11 @@ export const useScrollTrigger = ({ onece = false, point = 0.8 }: Props = {}) => 
                 setActive(false);
             }
         };
+        handleScroll();
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    });
+    }, []);
     return { ref, active };
 }

@@ -29,6 +29,7 @@ export default function Timeline({ data, isEnd }: Props) {
       if (px < 0) percent = Math.min(Math.abs(px) / line.height, 1) * 100;
       lineRef.current.style.background = `linear-gradient(var(--text-color) ${percent}%, var(--text-color-opacity-20p) ${percent}%)`;
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
