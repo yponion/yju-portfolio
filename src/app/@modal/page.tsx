@@ -20,15 +20,21 @@ export default function Modal() {
 
   useEffect(() => {
     if (searchParams.get("modal") === "open") {
-      if (data) setShow(true);
-      else {
+      if (data) {
+        setShow(true);
+        document.body.style.overflow = "hidden";
+      } else {
         const newParams = new URLSearchParams(searchParams.toString());
         newParams.delete("modal");
         router.replace(`?${newParams.toString()}`);
       }
     } else {
+      document.body.style.overflow = "auto";
       setShow(false);
     }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [searchParams, data]);
 
   const closeModal = () => {
