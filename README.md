@@ -1,4 +1,4 @@
-# <a href="https://yju-portfolio.vercel.app" target="_blank" rel="noopener noreferrer">yju-portfolio</a>
+# [yju-portfolio](https://yju-portfolio.vercel.app)
 
 ### 웹으로 만든 Frontend 포트 폴리오
 
