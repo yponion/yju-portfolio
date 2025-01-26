@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import style from "./Card.module.scss";
 import { useEffect, useRef, useState } from "react";
 

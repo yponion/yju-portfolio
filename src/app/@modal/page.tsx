@@ -64,7 +64,7 @@ export default function Modal() {
             {data?.images.map((v, i) => (
               <SwiperSlide key={i}>
                 <div className={style.img}>
-                  <Image fill src={v} alt={v} />
+                  <Image fill src={v} alt={data.title + " 이미지 " + i} />
                 </div>
               </SwiperSlide>
             ))}
