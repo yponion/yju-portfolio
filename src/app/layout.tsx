@@ -3,6 +3,7 @@ import "@/app/_styles/globals.scss";
 import Nav from "@/app/_components/nav/Nav";
 import Footer from "@/app/_components/footer/Footer";
 import { Suspense } from "react";
+import Loading from "./_components/loading/Loading";
 
 export const metadata: Metadata = {
   title: "양정운 포트폴리오",
@@ -28,7 +29,7 @@ export default function RootLayout({
         <footer>
           <Footer />
         </footer>
-        <Suspense>{modal}</Suspense>
+        <Suspense fallback={<Loading />}>{modal}</Suspense>
       </body>
     </html>
   );

@@ -1,0 +1,58 @@
+@use "sass:math";
+@use "sass:list";
+
+$size: 10;
+$gap: 2;
+$radius: calc($size / 2);
+$move: calc(calc($size + $gap) / 2); // 6
+$long: calc(calc($size * 2) + $gap); // 22
+$step: 24;
+$time: 6s;
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@for $i from 0 through 2 {
+  .container > div:nth-child(#{$i + 1}) {
+    height: $size;
+    width: $size;
+    border: 1px solid var(--text-color-opacity-90p);
+    border-radius: $radius;
+    position: absolute;
+    animation: animation $time infinite calc($time / 3) * -$i;
+  }
+}
+
+@keyframes animation {
+  $x: -$move;
+  $y: -$move;
+  $w: $size;
+  $h: $size;
+  $vectorX: $move 0 (-$move) 0;
+  $vectorY: 0 $move 0 (-$move);
+
+  @for $i from 0 through $step {
+    #{calc($i/ $step) * 100%} {
+      @if $i % 6 == 1 or $i % 6 == 2 {
+        $x: $x + list.nth($vectorX, math.floor(math.div($i, 6)) + 1);
+        $y: $y + list.nth($vectorY, math.floor(math.div($i, 6)) + 1);
+        @if $x == 0 {
+          $w: $long;
+        } @else if $y == 0 {
+          $h: $long;
+        } @else {
+          $w: $size;
+          $h: $size;
+        }
+      }
+      transform: translate(#{$x}px, #{$y}px);
+      width: #{$w}px;
+      height: #{$h}px;
+    }
+  }
+}
