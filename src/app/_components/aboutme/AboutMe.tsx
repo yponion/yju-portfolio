@@ -2,7 +2,18 @@ import Timeline from "./components/timeline/Timeline";
 import Title from "../title/Title";
 import style from "./AboutMe.module.scss";
 
-const data = [
+const now = new Date();
+const year = now.getFullYear();
+const month = String(now.getMonth() + 1).padStart(2, "0");
+const formattedDate = `${year}.${month}`;
+
+interface Data {
+  title: string;
+  date: string;
+  content?: string;
+}
+
+const data: Data[] = [
   { title: "출생", date: "2000.03" },
   { title: "영천중학교 졸업", date: "2017.02" },
   { title: "영천고등학교 졸업", date: "2019.02" },
@@ -14,11 +25,13 @@ const data = [
   },
   {
     title: "입사 지원",
-    date: "today",
+    date: formattedDate,
     content:
       "빠르게 변화하는 기술 환경 속에서도 끊임없이 학습하며, 팀과의 적극적인 협업을 통해 문제를 효율적으로 해결하는 개발자가 되겠습니다.",
   },
 ];
+
+data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
 export default function AboutMe() {
   return (
