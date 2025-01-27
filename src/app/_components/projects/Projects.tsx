@@ -11,13 +11,16 @@ const data: Project[] = [
     images: [],
     date: "2025.01",
     headcount: 1,
-    introduce: `나만의 포트폴리오를 위한 웹사이트 제작.
+    introduce: `프론트엔드 개발자로서 역량을 효과적으로 보여줄 수 있는 방법을 고민한 끝에, 웹사이트 형태의 포트폴리오를 제작하였다.
 
-모션 라이브러리 없이 직접 JS 또는 CSS로 구현.
-Sass를 이용하여 스타일링.
-Zustand를 이용한 상태관리.
-react-qr-code을 이용하여 연락처 QR코드로 생성.
-swiper를 이용하여 이미지 무한크롤을 간단하게 구현.`,
+- Next.js를 사용하여 SSR과 SSR을 적절히 혼합.
+- 화면 크기와 시스템 컬러 모드에 따른 반응형 디자인을 중심으로 웹사이트를 설계하고 구현.
+- 스타일링은 Sass를 사용해 직관적이고 효율적으로 구현.
+  - if 문과 for 문 등을 이용하여 애니메이션을 하드코딩 없이 구현.
+- framer-motion와 같은 라이브러리를 사용하지 않고 JS와 CSS로 직접 애니메이션 구현.
+- Zustand를 이용한 상태관리.
+- react-qr-code을 이용하여 연락처 QR코드로 생성.
+- swiper를 이용하여 이미지 무한크롤을 간단하게 구현.`,
     github: "https://github.com/yponion/yju-portfolio",
   },
   {
@@ -35,10 +38,10 @@ swiper를 이용하여 이미지 무한크롤을 간단하게 구현.`,
     headcount: 2,
     introduce: `AI 가상 인터뷰.
     
-자기소개서, 입사지원서 따위의 pdf, docs, hwp 파일을 입력하면 AI가 분석하여 면접 예상 질문을 뽑아주고 답변에대한 피드백 까지 해주는 웹 애플리케이션.
-Web Speech API를 활용해 음성답변 기능 구현.
+- 자기소개서, 입사지원서 따위의 pdf, docs, hwp 파일을 입력하면 AI가 분석하여 면접 예상 질문을 뽑아주고 답변에대한 피드백 까지 해주는 웹 애플리케이션.
+- Web Speech API를 활용해 음성답변 기능 구현.
 
-현재 Claude API 등 과금 문제로 Backend server는 내려가있음.`,
+- 현재 Claude API 등 과금 문제로 Backend server는 내려가있음.`,
     github: "https://github.com/Capstone-QCraft/client",
   },
   {
@@ -48,8 +51,9 @@ Web Speech API를 활용해 음성답변 기능 구현.
     images: [],
     date: "2024.04",
     headcount: 1,
-    introduce:
-      "프로젝트 관리 웹사이트.\n\n기존 팀프로젝트 ProjectManagement의 Backend 부분을 Node.js와 MongoDB를 이용하여 직접 구현하며 Backend에 대한 이해도 상승.",
+    introduce: `프로젝트 관리 웹사이트.
+    
+- 기존 팀프로젝트 ProjectManagement의 Backend 부분을 Node.js와 MongoDB를 이용하여 직접 구현하며 Backend에 대한 이해도 상승.`,
     github: "https://github.com/yponion/ProjectManagement",
   },
   {
@@ -59,7 +63,12 @@ Web Speech API를 활용해 음성답변 기능 구현.
     images: [],
     date: "2023.11 - 2024.12",
     headcount: 2,
-    introduce: "프로젝트 관리 웹사이트.\n\n본격적인 웹 개발 입문.",
+    introduce: `프로젝트 관리 웹사이트.
+    
+- 본격적인 웹 개발 입문.
+  - 기존 HTML, CSS, JS 를 이용하여 화면을 구성하는 것에 흥미를 느껴 React를 이용하여 웹 개발에 도전.
+- Redux를 통한 상태관리.
+  - 새로고침 시 데이터가 초기화 되는 것을 몰라 고생좀 하였다.`,
     github: "https://github.com/yponion/ProjectManagement",
   },
 ];
