@@ -41,6 +41,16 @@ export default function Modal() {
     router.back();
   };
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeModal();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   if (!show) return null;
   return (
     <div className={style.container} onClick={closeModal}>
