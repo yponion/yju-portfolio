@@ -45,11 +45,13 @@ export default function Modal() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") closeModal();
     };
-    document.addEventListener("keydown", handleKeyDown);
+    if (searchParams.get("modal") === "open")
+      document.addEventListener("keydown", handleKeyDown);
+    else document.removeEventListener("keydown", handleKeyDown);
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [searchParams]);
 
   if (!show) return null;
   return (
