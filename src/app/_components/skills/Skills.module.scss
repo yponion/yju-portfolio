@@ -40,6 +40,17 @@
   h1 {
     font-size: 30px;
   }
+
+  @media #{v.$mobile} {
+    justify-content: center;
+    div {
+      width: 20px;
+      height: 20px;
+    }
+    h1 {
+      font-size: 20px;
+    }
+  }
 }
 
 .skills {
@@ -47,4 +58,5 @@
   flex-wrap: wrap;
   gap: 10px;
   flex: 7.5;
+  justify-content: center;
 }
