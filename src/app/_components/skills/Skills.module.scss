@@ -48,32 +48,3 @@
   gap: 10px;
   flex: 7.5;
 }
-
-.skill {
-  display: flex;
-  gap: 5px;
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.svg {
-  width: 30px;
-  height: 30px;
-
-  @media #{v.$mobile} {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-.name {
-  font-size: 20px;
-  line-height: 30px;
-  padding: 0 5px;
-
-  @media #{v.$mobile} {
-    font-size: 16px;
-    line-height: 20px;
-    padding: 0 5px;
-  }
-}

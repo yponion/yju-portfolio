@@ -1,0 +1,57 @@
+@use "@/app/_styles/variables.scss" as v;
+
+@mixin activeOrHover {
+  border-radius: 5px;
+  gap: 5px;
+
+  .name {
+    max-width: 170px;
+    margin: 0 5px;
+  }
+}
+
+.skill {
+  display: flex;
+  padding: 5px;
+  border-radius: 50%;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+
+  @media #{v.$mobile} {
+    &.active {
+      @include activeOrHover;
+    }
+  }
+
+  @media #{v.$desktop} {
+    &:hover {
+      @include activeOrHover;
+    }
+  }
+}
+
+.svg {
+  width: 30px;
+  height: 30px;
+
+  @media #{v.$mobile} {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.name {
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 0px;
+  text-wrap: nowrap;
+  overflow: hidden;
+  transition: all 0.5s;
+
+  @media #{v.$mobile} {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
