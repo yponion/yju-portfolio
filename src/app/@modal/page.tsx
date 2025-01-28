@@ -103,6 +103,7 @@ export default function Modal() {
             </svg>
           </div>
           <a
+            title={data?.title + " 깃허브"}
             target="_blank"
             rel="noopener noreferrer"
             className={style.link}
