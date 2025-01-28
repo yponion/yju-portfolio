@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description,
     url: process.env.NEXT_PUBLIC_BASE_URL,
     images: {
-      url: "/og-image.png",
+      url: "/og-image.webp",
       width: 1200,
       height: 630,
       alt: "yju-portfolio 이미지",
