@@ -5,9 +5,24 @@ import Footer from "@/app/_components/footer/Footer";
 import { Suspense } from "react";
 import Loading from "./_components/loading/Loading";
 
+const title = "양정운 포트폴리오";
+const description = "프론트 엔드 개발자 양정운 포트폴리오";
+
 export const metadata: Metadata = {
-  title: "양정운 포트폴리오",
-  description: "프론트 엔드 개발자 양정운 포트폴리오",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL as string),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    images: {
+      url: "/og-image.png",
+      width: 400,
+      height: 400,
+      alt: "yju-portfolio 이미지",
+    },
+  },
 };
 
 export default function RootLayout({
