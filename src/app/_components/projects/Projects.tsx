@@ -58,14 +58,14 @@ const data: Project[] = [
   },
   {
     title: "Project Pulse BE",
-    skills: ["Node.js", "JavaScript", "MongoDB"],
+    skills: ["Express", "JavaScript", "MongoDB"],
     src: "/project-pulse-be.png",
     images: [],
     date: "2024.04",
     headcount: 1,
     introduce: `프로젝트 관리 웹사이트.
     
-- 기존 팀프로젝트 ProjectManagement의 Backend 부분을 Node.js와 MongoDB를 이용하여 직접 구현하며 Backend에 대한 이해도 상승.`,
+- 기존 팀프로젝트 ProjectManagement의 Backend 부분을 Express와 MongoDB를 이용하여 직접 구현하며 Backend에 대한 이해도 상승.`,
     github: "https://github.com/yponion/ProjectManagement",
   },
   {
