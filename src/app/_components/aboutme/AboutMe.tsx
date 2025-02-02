@@ -8,7 +8,7 @@ interface Data {
   content?: string;
 }
 
-export async function getServerSideProps() {
+export default function AboutMe() {
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, "0");
@@ -34,12 +34,6 @@ export async function getServerSideProps() {
 
   data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-  return {
-    props: { data },
-  };
-}
-
-export default function AboutMe({ data }: { data: Data[] }) {
   return (
     <section id="AboutMe" className={style.container}>
       <Title title="AboutMe" />
