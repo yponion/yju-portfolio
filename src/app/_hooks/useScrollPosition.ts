@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+/** 스크롤의 현재 위치와 이전 위치를 반환 */
 export function useScrollPosition() {
     const [scrollPosition, setScrollPosition] = useState({
         currentY: 0,

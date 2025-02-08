@@ -5,6 +5,7 @@ interface Props {
     point?: number;
 }
 
+/** 요소가 뷰포트의 point 지점을 기준으로 밑으로 가면 active true 반환 */
 export const useScrollTrigger = ({ onece = false, point = 0.8 }: Props = {}) => {
     const ref = useRef<HTMLDivElement>(null);
     const [active, setActive] = useState(false);

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+/** 화면의 너비가 767 이하이면 true를 반환 */
 export default function useIsMobile() {
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
