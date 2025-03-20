@@ -100,7 +100,7 @@ const data: Project[] = [
     skills: ["React", "JavaScript", "Redux"],
     src: "/project-pulse-fe.png",
     images: [],
-    date: "2023.11 - 2024.12",
+    date: "2023.11 - 2023.12",
     headcount: 2,
     introduce: `프로젝트 관리 웹사이트.
     
