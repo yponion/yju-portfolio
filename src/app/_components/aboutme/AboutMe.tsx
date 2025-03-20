@@ -24,12 +24,6 @@ export default function AboutMe() {
       date: "2025.02",
       content: "컴퓨터공학부 소프트웨어전공",
     },
-    {
-      title: "입사 지원",
-      date: formattedDate,
-      content:
-        "빠르게 변화하는 기술 환경 속에서도 끊임없이 학습하며, 팀과의 적극적인 협업을 통해 문제를 효율적으로 해결하는 개발자가 되겠습니다.",
-    },
   ];
 
   data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
