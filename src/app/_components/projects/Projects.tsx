@@ -5,6 +5,33 @@ import Card from "./components/card/Card";
 
 const data: Project[] = [
   {
+    title: "Transfer",
+    skills: ["Next.js", "TypeScript", "Tailwind CSS", "React Native webview"],
+    src: "/transfer/d-01.png",
+    images: [
+      "/transfer/d-01.png",
+      "/transfer/d-02.png",
+      "/transfer/d-03.png",
+      "/transfer/m-01.png",
+      "/transfer/m-02.png",
+      "/transfer/m-03.png",
+      "/transfer/m-04.png",
+    ],
+    date: "2025.02",
+    headcount: 1,
+    introduce: `기차 환승
+
+- 기차를 환승 할 때 두번 이상 환승하는 경로는 볼 수 없었다. 하지만 두번 이상 환승하면 더 효율적인 동선을 짤 수 있다는 것을 안 나는 직접 사용할 서비스를 제작하기로 했다.
+
+- 공공데이터를 활용해 일정을 효율적으로 작성가능.
+
+- 타임라인을 통해 구성한 일정을 한눈에 알아보기 쉬움.
+
+- 반응형으로 모바일웹에서도 사용가능 및 웹뷰로 React Native 앱에 탑재
+  onMessage를 이용해 웹뷰 <-> React Native 간 통신`,
+    github: "https://github.com/yponion/transfer",
+  },
+  {
     title: "yju-portfolio",
     skills: ["Next.js", "TypeScript", "Sass"],
     src: process.env.NEXT_PUBLIC_BASE_URL as string,
