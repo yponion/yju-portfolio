@@ -14,6 +14,8 @@
 
   - 구글, 네이버에 [‘양정운 포트폴리오’, ‘개발자 양정운’, ‘프론트 양정운’] 검색 시 1면 1열에 배치
 
+    ![검색 화면 캡쳐 이미지](https://yju-portfolio.com/search.png)
+
 - SCSS 로 효율적이고, 유지보수에 유리한 스타일링
 
   - 공통되는 스타일을 ‘mixin’ 으로 재사용성을 높임
@@ -28,6 +30,8 @@
 
 - Zustand 로 가볍고 빠른 상태 관리
 
+  - 기존 사용하던 Redux 보다 보일러플레이트가 확연히 적어 npm trends에서 급부상 하고 있는 이유를 알것 같고, 가벼운 프로젝트에서 애용할 듯 하다.
+
   - Parallel Routes 로 띄운 모달에 상태를 공유
 
 - 반응형
@@ -38,7 +42,26 @@
 
 ## Troubleshooting
 
-- 모바일에서 body에 스크롤이 있어야 주소창이 숨겨졌고, 다른 방법으로 숨길 수 없어서 기존 레이아웃에서 body에 스크롤이 가능하게 갈아엎음
+- 주소창 숨김 이슈
+
+  - 모바일에서 body에 스크롤이 있어야 주소창이 숨겨졌고, 다른 방법으로 숨길 수 없어서 기존 레이아웃에서 body에 스크롤이 가능한 레이아웃으로 변경
+
+- safari 에선 background-attachment: fixed 미지원
+
+  -기존 스크롤 시 선 색상이 바뀌는 것을 CSS 의 linear-gradient, ackground-attachment: fixed 로 구현했으나 safari 에선 background-attachment: fixed 가 안먹혀서 JavaScript로 구현
+
+- 네이버 검색에선 favicon이 안뜨는 이슈.
+
+  - public 디렉토리에 favicon을 복사
+
+  - public 디렉토리에 robots.txt
+
+    ```
+    User-agent: \*
+    Allow: /
+    ```
+
+    - 둘 중 어떤 것 때문이었는지 알기위해 app 의 favicon 을 vercel favicon 으로 변경하고, public 의 favicon 을 제거해봄 -> 네이버 크롤링 봇이 반영하는데 1~2주 정도 걸린다 하니 확인 후 readme 업데이트 해야겠다.
 
 ## 🔨 Technology Stack(s)
 
