@@ -22,7 +22,7 @@ const data: Project[] = [
   },
   {
     title: "yju-portfolio",
-    skills: ["Next.js", "TypeScript", "Sass"],
+    skills: ["Next.js", "TypeScript", "Sass", "Zustand"],
     src: process.env.NEXT_PUBLIC_BASE_URL as string,
     images: [
       "/portfolio/d1.png",
