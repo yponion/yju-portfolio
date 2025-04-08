@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   padding: 15px;
+  position: relative;
   @media #{v.$desktop} {
     box-shadow: 0 0 1px var(--text-color);
     margin: 50px calc((100% - 700px) / 2);
@@ -27,18 +28,11 @@
   }
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  margin-bottom: 5px;
-}
-
-.title {
-  font-size: clamp(10px, 10vw, 32px);
-}
-
 .close {
+  z-index: #{v.$z-modal};
+  position: absolute;
+  right: 15px;
+  top: 15px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -63,43 +57,14 @@
 .img {
   height: 400px;
   img {
+    padding: 30px;
     object-fit: contain;
     user-select: none;
   }
 }
 
-.skills {
-  display: flex;
-  gap: 10px;
-  padding: 5px;
-  padding-top: 10px;
-  flex-wrap: wrap;
-}
-
-.skill {
-  border: solid 1px var(--text-color-opacity-90p);
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.date {
-  padding: 5px;
-  color: var(--text-color-opacity-90p);
-}
-
-.headcount {
-  color: var(--text-color-opacity-90p);
-  padding: 5px;
-}
-
-.introduce {
-  padding: 5px;
-  white-space: pre-wrap;
-  line-height: 1.5;
-}
-
-.space {
-  flex: 1;
+.markdown {
+  padding: 0 10px;
 }
 
 .foot {
