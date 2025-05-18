@@ -63,6 +63,13 @@
 
     - 둘 중 어떤 것 때문이었는지 알기위해 app 의 favicon 을 vercel favicon 으로 변경하고, public 의 favicon 을 제거해봄 -> 네이버 크롤링 봇이 반영하는데 1~2주 정도 걸린다 하니 확인 후 readme 업데이트 해야겠다.
 
+    - 위 방법 적용후 1달이 이후 favicon 변경 상황
+
+      - 구글 custom favicon -> vercel favicon
+      - 네이버 custom favicon -> custom favicon
+
+      favicon 이 변경되지 않아, 반대로 public 디렉토리에 favicon(vercel 기본)을 복사 해두고, robots.txt 를 삭제해봐야겠다.
+
 ## 🔨 Technology Stack(s)
 
 | Stack                                                                                                 | Version  | etc.       |
