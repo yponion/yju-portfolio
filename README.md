@@ -70,6 +70,8 @@
 
       favicon 이 변경되지 않아, 반대로 public 디렉토리에 favicon(vercel 기본)을 복사 해두고, robots.txt 를 삭제해봐야겠다.
 
+- [h1 태그 SEO 개선](https://velog.io/@yp071704/h1h6-태그의-중요성)
+
 ## 🔨 Technology Stack(s)
 
 | Stack                                                                                                 | Version  | etc.       |
