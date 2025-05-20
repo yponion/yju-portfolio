@@ -28,28 +28,23 @@ export default function Main() {
     <section className={style.container}>
       <div className={style.mainWrapper}>
         <div className={style.mainH1s}>
-          <h1 className={style.mainName}>- 양정운 -</h1>
+          <h2 className={style.mainName}>- 양정운 -</h2>
           <h1 className={style.mainTitle}>프론트 엔드 개발자 포트폴리오</h1>
         </div>
         <hr className={style.mainHr} />
         <div className={style.mainIntroduce}>
-          <h2>
+          <p>
             <span>반응형 UI</span>를 즐기고,
             <br /> UX를 중시하는 프론트 엔드 개발자
             <br /> 양정운 입니다.
-          </h2>
+          </p>
         </div>
       </div>
       <div id="Contact" className={style.contactWrapper}>
         <Title title="Contact" />
         <div className={style.contactContent}>
           {data.map((v) => (
-            <Card
-              key={v.title}
-              title={v.title}
-              svg={v.svg}
-              content={v.content}
-            />
+            <Card key={v.title} title={v.title} svg={v.svg} content={v.content} />
           ))}
         </div>
       </div>

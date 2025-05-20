@@ -42,7 +42,7 @@ export default function Timeline({ data, isEnd }: Props) {
           {isEnd ? null : <div ref={lineRef} className={style.line} />}
         </div>
         <div className={style.content}>
-          <h1>{data.title}</h1>
+          <h3>{data.title}</h3>
           {data.date ? <small>{data.date}</small> : null}
           {data.content ? <p>{data.content}</p> : null}
         </div>

@@ -37,7 +37,7 @@ export default function Title({ title }: Props) {
   return (
     <div className={style.container}>
       <div className={style.svg}>{svg[title]}</div>
-      <h1 className={style.h1}>{title}</h1>
+      <h2 className={style.h1}>{title}</h2>
     </div>
   );
 }

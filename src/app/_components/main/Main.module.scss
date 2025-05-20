@@ -12,10 +12,7 @@
 
 .mainWrapper {
   padding-top: 72px;
-  background: linear-gradient(
-      var(--bg-color-opacity-90p),
-      var(--bg-color-opacity-90p)
-    ),
+  background: linear-gradient(var(--bg-color-opacity-90p), var(--bg-color-opacity-90p)),
     url("/cover.png") center/cover no-repeat;
   flex: 7;
   display: flex;

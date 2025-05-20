@@ -363,7 +363,7 @@ export default function Skills() {
             <div key={v.title} className={style.row}>
               <div className={style.title}>
                 <div>{v.svg}</div>
-                <h1>{v.title}</h1>
+                <h3>{v.title}</h3>
               </div>
               <div className={style.skills}>
                 {v.skills.map((skill) => (

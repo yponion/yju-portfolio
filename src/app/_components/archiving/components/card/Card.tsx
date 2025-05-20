@@ -43,10 +43,8 @@ export default function Card({ data }: Props) {
         <p>{data.content}</p>
       </div>
       <div className={style.fg}>
-        <div className={data.title === "GitHub" ? style.github : ""}>
-          {data.svg}
-        </div>
-        <h1>{data.title}</h1>
+        <div className={data.title === "GitHub" ? style.github : ""}>{data.svg}</div>
+        <h3>{data.title}</h3>
       </div>
     </a>
   );

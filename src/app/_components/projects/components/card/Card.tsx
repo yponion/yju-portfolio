@@ -31,7 +31,7 @@ export default function Card({ project }: Props) {
         )}
       </div>
       <div className={style.text}>
-        <h1 className={style.title}>{project.title}</h1>
+        <h3 className={style.title}>{project.title}</h3>
         <p className={style.skills}>{project.skills.join(" / ")}</p>
         <p className={style.more}>{project.introduce}</p>
       </div>
