@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import type { Skill } from "../Skills";
+import type { Skill } from "../../Skills";
 import style from "./Skill.module.scss";
 
 interface Props {
@@ -30,6 +30,17 @@ export default function Skill({ skill }: Props) {
       ) : null}
       <div className={style.name} style={{ color: skill.color.fg }}>
         {skill.name}
+      </div>
+      <div
+        className={`${
+          skill.proficiency === 3
+            ? style.proficiency3
+            : skill.proficiency === 2
+            ? style.proficiency2
+            : style.proficiency1
+        }`}
+      >
+        {skill.proficiency === 3 ? "上" : skill.proficiency === 2 ? "中" : "下"}
       </div>
     </div>
   );

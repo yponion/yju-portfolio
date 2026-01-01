@@ -8,6 +8,12 @@
     max-width: 170px;
     margin: 0 5px;
   }
+
+  .proficiency1,
+  .proficiency2,
+  .proficiency3 {
+    opacity: 1;
+  }
 }
 
 .skill {
@@ -54,4 +60,32 @@
     font-size: 16px;
     line-height: 20px;
   }
+}
+
+@mixin proficiency {
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  padding-top: 1px;
+  text-align: center;
+  color: white;
+  opacity: 0;
+}
+
+.proficiency1 {
+  @include proficiency;
+  background-color: gray;
+}
+
+.proficiency2 {
+  @include proficiency;
+  background-color: cornflowerblue;
+}
+
+.proficiency3 {
+  @include proficiency;
+  background-color: red;
 }

@@ -10,6 +10,30 @@
   padding: 50px 20px 0 20px;
 }
 
+.showMoreBtnWrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.showMoreBtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: gray;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.description {
+  padding-top: 10px;
+  li {
+    padding-top: 5px;
+    margin-left: 15px;
+  }
+}
+
 .table {
   flex: 1;
   max-width: var(--max-width);
