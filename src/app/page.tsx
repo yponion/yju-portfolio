@@ -4,11 +4,12 @@ import Skills from "./_components/skills/Skills";
 import Archiving from "./_components/archiving/Archiving";
 import Projects from "./_components/projects/Projects";
 
-export default function Page() {
+export default async function Page({ searchParams }: { searchParams: { company?: string } }) {
+  const { company } = searchParams;
   return (
     <>
       <Main />
-      <AboutMe />
+      <AboutMe company={company} />
       <Skills />
       <Archiving />
       <Projects />
