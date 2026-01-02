@@ -5,6 +5,14 @@ import Card from "./components/card/Card";
 
 const data: Project[] = [
   {
+    title: "Chrome-extension",
+    skills: ["JavaScript"],
+    src: "/chrome-extension/main.gif",
+    images: ["/chrome-extension/main.gif"],
+    introduce: "사람인 크롬 익스텐션",
+    github: { owner: "yponion", repo: "saramin-auto-input-portfolio" },
+  },
+  {
     title: "Transfer",
     skills: ["Next.js", "TypeScript", "Tailwind CSS", "React Native webview"],
     src: "/transfer/d-01.png",
