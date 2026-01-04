@@ -4,8 +4,10 @@ import Skills from "./_components/skills/Skills";
 import Archiving from "./_components/archiving/Archiving";
 import Projects from "./_components/projects/Projects";
 
-export default async function Page({ searchParams }: { searchParams: { company?: string } }) {
-  const { company } = searchParams;
+type Params = Promise<{ company: string }>;
+
+export default async function Page(params: Params) {
+  const { company } = await params;
   return (
     <>
       <Main />
