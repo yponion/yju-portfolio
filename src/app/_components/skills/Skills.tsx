@@ -387,9 +387,9 @@ export default function Skills() {
       <Title title="Skills" />
       <div className={style.wrapper}>
         <div>
-          <p>마우스를 올리거나 클릭하여(모바일) 숙련도를 확인할 수 있습니다.</p>
+          <p className={style.description}>마우스를 올리거나 클릭하여(모바일) 숙련도를 확인할 수 있습니다.</p>
           {showMore ? (
-            <ul className={style.description}>
+            <ul className={style.descriptionList}>
               <li>
                 <strong>上</strong>: 실무에서 자연스럽게 사용할 수 있는 수준
               </li>
