@@ -40,6 +40,10 @@
 
   - prefers-color-scheme 에 따라 색상 변경
 
+- 뒤로가기가 적용되는 모달
+
+  - Parallel Routes 와 Intercepting Routes 를 사용하여 모달처럼 뜨지만 뒤로가기 history가 적용되도록하여 뒤로가기시 모달이 닫히게 함.
+
 ## Troubleshooting
 
 - 주소창 숨김 이슈
@@ -70,16 +74,18 @@
 
       favicon 이 변경되지 않아, 반대로 public 디렉토리에 favicon(vercel 기본)을 복사 해두고, robots.txt 를 삭제해봐야겠다.
 
+      naver 검색 목록에서 사라짐 -> 공식문서에 따라 app 하위에 favicon과 robots.txt 를 위치시킴
+
 - [h1 태그 SEO 개선](https://velog.io/@yp071704/h1h6-태그의-중요성)
 
 ## 🔨 Technology Stack(s)
 
-| Stack                                                                                                 | Version  | etc.       |
-| ----------------------------------------------------------------------------------------------------- | -------- | ---------- |
-| <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white">       | `15.1.4` | App Router |
-| <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=black">           | `19.0.0` |
-| <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"> | `5`      |
-| <img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=Sass&logoColor=white">             | `1.83.3` |
+| Stack                                                                                                 | Version   | etc.       |
+| ----------------------------------------------------------------------------------------------------- | --------- | ---------- |
+| <img src="https://img.shields.io/badge/Next.js-000000?style=flat&logo=Next.js&logoColor=white">       | `15.1.11` | App Router |
+| <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=black">           | `19.0.0`  |
+| <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=TypeScript&logoColor=white"> | `5`       |
+| <img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=Sass&logoColor=white">             | `1.83.3`  |
 
 ## ⚙️ Setup & Usage
 
