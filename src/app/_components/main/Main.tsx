@@ -29,13 +29,13 @@ export default function Main() {
       <div className={style.mainWrapper}>
         <div className={style.mainH1s}>
           <h2 className={style.mainName}>- 양정운 -</h2>
-          <h1 className={style.mainTitle}>프론트 엔드 개발자 포트폴리오</h1>
+          <h1 className={style.mainTitle}>프론트엔드 개발자 포트폴리오</h1>
         </div>
         <hr className={style.mainHr} />
         <div className={style.mainIntroduce}>
           <p>
             <span>반응형 UI</span>를 즐기고,
-            <br /> UX를 중시하는 프론트 엔드 개발자
+            <br /> UX를 중시하는 프론트엔드 개발자
             <br /> 양정운 입니다.
           </p>
         </div>

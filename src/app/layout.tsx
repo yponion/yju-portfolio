@@ -6,7 +6,7 @@ import { Suspense } from "react";
 import Loading from "./_components/loading/Loading";
 
 const title = "양정운 포트폴리오";
-const description = "프론트 엔드 개발자 양정운 포트폴리오";
+const description = "프론트엔드 개발자 양정운 포트폴리오";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL as string),
