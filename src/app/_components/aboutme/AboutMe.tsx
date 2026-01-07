@@ -10,7 +10,7 @@ interface Data {
   content?: string;
 }
 
-export default function AboutMe({ company }: { company: string | undefined }) {
+export default function AboutMe({ company }: { company: string | string[] | undefined }) {
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, "0");
