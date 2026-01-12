@@ -25,7 +25,7 @@ export default function Card({ project }: Props) {
     <div ref={ref} className={`${style.card} ${active ? style.active : ""}`} onClick={() => openModal(project)}>
       <div className={style.viewBox}>
         {project.title === "yju-portfolio" ? (
-          <iframe src={project.src} />
+          <iframe src={project.src} title="portfolioFrame" />
         ) : (
           <Image className={style.img} fill src={project.src} alt={project.title + "이미지"} />
         )}
