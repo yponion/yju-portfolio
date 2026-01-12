@@ -40,10 +40,6 @@
 
   - prefers-color-scheme 에 따라 색상 변경
 
-- 뒤로가기가 적용되는 모달
-
-  - Parallel Routes 와 Intercepting Routes 를 사용하여 모달처럼 뜨지만 뒤로가기 history가 적용되도록하여 뒤로가기시 모달이 닫히게 함.
-
 ## Troubleshooting
 
 - 주소창 숨김 이슈
